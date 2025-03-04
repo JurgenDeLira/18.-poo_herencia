@@ -6,6 +6,31 @@ public class Alumno extends Persona{
     private double notaIngles;
     private double notaHistoria;
 
+    public Alumno(){
+        System.out.println("Alumno: inicializando constructor...");
+    }
+
+    public Alumno(String nombre, String apellido){
+        super(nombre, apellido);
+    }
+
+    public Alumno(String nombre, String apellido, int edad){
+        super(nombre, apellido, edad);
+    }
+
+    public Alumno(String nombre, String apellido, int edad, String institucion){
+        this(nombre, apellido, edad); //aplica como super por tomar el de arriba
+        this.institucion = institucion;
+    }
+
+    public Alumno (String nombre, String apellido, int edad,
+                   String institucion, double notaMatematicas, double notaIngles,
+                   double notaHistoria){
+        this(nombre, apellido, edad, institucion);
+        this.notaMatematicas = notaMatematicas;
+        this.notaIngles = notaIngles;
+        this.notaHistoria = notaHistoria;
+    }
 
 
     public String getInstitucion() {
