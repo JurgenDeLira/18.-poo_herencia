@@ -13,7 +13,7 @@ public class EjemploHerenciaConstructores {
         alumno.setEmail("jorge@correo.com");
 
         System.out.println("======= Creando la instancia de la clase AlumnoInternacional =======");
-        AlumnoInternacional alumnoInt = new AlumnoInternacional("Jimbo", "Gallagher", "Estados unidos");
+        AlumnoInternacional alumnoInt = new AlumnoInternacional("Jimbo", "Schulze", "Alemania");
         alumnoInt.setEdad(15);
         alumnoInt.setInstitucion("Instituto Nacional");
         alumnoInt.setNotaIdiomas(6.8);
@@ -52,12 +52,17 @@ public class EjemploHerenciaConstructores {
                 System.out.println("Nota idiomas: " + ((AlumnoInternacional) persona).getNotaIdiomas());
                 System.out.println("País: " + ((AlumnoInternacional) persona).getPais());
             }
+            System.out.println("=========== Sobre escritura promedio ===========");
+            System.out.println("Promedio: " + ((Alumno) persona).calcularPromedio());
+            System.out.println("===============================================");
         }
         // System.out.println(persona.getPais()); Aqui no funcionaria porque no estas haciendo un instanceof
         if(persona instanceof  Profesor){
             System.out.println("Imprimiendo los datos del tipo Profesor: ");
             System.out.println("Asignatura: " + ((Profesor) persona).getAsignatura());
         }
-        System.out.println("======= - =======");
+        System.out.println("=========== Sobre escritura saludar ===========");
+        System.out.println(persona.saludar());
+        System.out.println("===============================================");
     }
 }
