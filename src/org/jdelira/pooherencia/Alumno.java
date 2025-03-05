@@ -77,7 +77,7 @@ public class Alumno extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() +
+         return super.toString() +
                 "\ninstitucion='" + institucion + '\'' +
                 ", notaMatematicas=" + notaMatematicas +
                 ", notaIngles=" + notaIngles +
